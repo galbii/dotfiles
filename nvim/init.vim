@@ -13,11 +13,13 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :wq<CR>
 nnoremap <Leader>Q :q!<CR>
 nnoremap <Leader>o :e 
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-p> :Files<CR>
 nnoremap <Leader>O :bd<CR>
 nnoremap <Leader>' :bn<CR>
 nnoremap <Leader>" :bp<CR>
 nnoremap <leader>dt :put=strftime('@@%Y-%m-%d')<CR>
+nnoremap oo o<Esc>j
+nnoremap OO O<Esc>k
 
 "backup
 set backupdir=/tmp
@@ -38,14 +40,15 @@ nnoremap <leader>nh :noh<CR>
 
 
 call plug#begin()
-Plug 'preservim/nerdtree'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
-Plug 'flazz/vim-colorschemes'
+"Plug 'flazz/vim-colorschemes'
 Plug 'itchyny/lightline.vim'
 call plug#end()
-colorscheme gruvbox
+"colorscheme gruvbox
 
 let g:coc_global_extensions = [
       \'coc-python',
