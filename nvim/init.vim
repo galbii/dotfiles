@@ -2,6 +2,7 @@
 syntax on
 
 "relative number gang
+set nu
 set relativenumber
 let mapleader = ","
 
@@ -18,8 +19,6 @@ nnoremap <Leader>O :bd<CR>
 nnoremap <Leader>' :bn<CR>
 nnoremap <Leader>" :bp<CR>
 nnoremap <leader>dt :put=strftime('@@%Y-%m-%d')<CR>
-nnoremap oo o<Esc>j
-nnoremap OO O<Esc>k
 
 "backup
 set backupdir=/tmp
